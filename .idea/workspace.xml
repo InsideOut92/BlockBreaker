@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2cf4f6b-c332-48c4-b41d-6f9b81e52483" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlockBreakerTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/ball.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/block001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/block002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/block01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/block02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/block_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/block_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/paddle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GamePlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapGenerator.java" afterDir="false" />
+    <list default="true" id="f2cf4f6b-c332-48c4-b41d-6f9b81e52483" name="Changes" comment="Unterricht">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePlay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +37,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/patrick/IdeaProjects/BlockBreakerTest/pictures",
     "settings.editor.selected.configurable": "vcs.Git"
   }
@@ -75,6 +59,21 @@
       <option name="presentableId" value="Default" />
       <updated>1706776024620</updated>
     </task>
+    <task id="LOCAL-00001" summary="Unterricht">
+      <created>1706789619529</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706789619529</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Unterricht">
+      <created>1706789659627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706789659627</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,5 +86,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Unterricht" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unterricht" />
   </component>
 </project>
