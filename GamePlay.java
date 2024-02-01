@@ -1,11 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-
-public class GamePlay extends JPanel implements KeyListener, ActionListener {
+import java.awt.event.*;
+                                                                             // by xhuljan Mouse......
+public class GamePlay extends JPanel implements KeyListener, ActionListener, MouseMotionListener {
 
     private boolean play = false;
     private int score = 0;
@@ -18,19 +15,34 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
     private int ballposX = 120;
     private int ballposY = 350;
 
-    private int ballXdir =-1;
+    private int ballXdir =-2;
     private int ballYdir =-2;
 
     private MapGenerator map;
 
+    private MouseEvent e;
     public GamePlay(){
+
         map = new MapGenerator(3, 7);
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
         timer = new Timer(delay, this);
         timer.start();
+
+
+        // by xhuljan  // Mouse Added
+        addMouseListener(this);
+        addMouseMotionListener(this);
+
     }
+
+
+    // by xhuljan // Mouse Added
+    private void addMouseListener(GamePlay gamePlay) {
+    }
+
+
 
     public void paint(Graphics g){
         // Hintergrund
@@ -90,8 +102,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
     public void actionPerformed(ActionEvent e) {
         timer.start();
         if(play){
-            if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX, 550,
-                    100, 8))){
+            if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX, 550, 100, 8))){
                 ballYdir = -ballYdir;
             }
 
@@ -99,20 +110,20 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
                 for (int j = 0; j < map.map[0].length; j++){
                     if(map.map[i][j] > 0){
                         int brickX = j * map.brickWidth + 80;
-                        int brickY = j * map.brickHeight + 50;
+                        int brickY = i * map.brickHeight + 50;
                         int brickWidth = map.brickWidth;
                         int brickHeight = map.brickHeight;
 
-                        Rectangle rect = new Rectangle(brickX, brickY, brickWidth, brickHeight);
+                        Rectangle brickRect = new Rectangle(brickX, brickY, brickWidth, brickHeight);
                         Rectangle ballRect = new Rectangle(ballposX, ballposY, 20, 20);
-                        Rectangle brickRect = rect;
 
                         if(ballRect.intersects(brickRect)){
                             map.setBrickValue(0, i, j);
                             totalBricks--;
                             score += 5;
 
-                            if (ballposX + 19 <= ballRect.x || ballposX + 1 >= brickRect.x +brickRect.width){
+                            // Anpassung der Ballrichtung nach der Kollision
+                            if(ballposX + 19 <= brickRect.x || ballposX + 1 >= brickRect.x + brickRect.width){
                                 ballXdir = -ballXdir;
                             } else {
                                 ballYdir = -ballYdir;
@@ -122,17 +133,20 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
                     }
                 }
             }
-                ballposX += ballXdir;
-                ballposY += ballYdir;
 
-            if(ballposX < 0){
+            ballposX += ballXdir;
+            ballposY += ballYdir;
+
+            if(ballposX < 0 || ballposX > 670){
                 ballXdir = -ballXdir;
             }
             if(ballposY < 0){
                 ballYdir = -ballYdir;
             }
-            if(ballposX < 670){
-                ballYdir = -ballYdir;
+            if(ballposY > 570){
+                play = false;
+                ballXdir = 0;
+                ballYdir = 0;
             }
         }
         repaint();
@@ -194,5 +208,22 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         playerX -= 20;
     }
 
+
+
+
+// by xhuljan   // Mouse Added
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        int mouseX = e.getX();
+        if (mouseX >= 0 && mouseX <= 600) {
+            playerX = mouseX - 15;
+        }
+        play = true;
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+    }
 
 }
