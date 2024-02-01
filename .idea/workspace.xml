@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2cf4f6b-c332-48c4-b41d-6f9b81e52483" name="Changes" comment="Unterricht">
+    <list default="true" id="f2cf4f6b-c332-48c4-b41d-6f9b81e52483" name="Changes" comment="Unterricht jetz läufts!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePlay.java" afterDir="false" />
     </list>
@@ -73,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706789659627</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Unterricht jetz läufts!">
+      <created>1706790270153</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706790270153</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Unterricht" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unterricht" />
+    <MESSAGE value="Unterricht jetz läufts!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unterricht jetz läufts!" />
   </component>
 </project>
