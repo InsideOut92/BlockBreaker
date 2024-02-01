@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
                                                                              // by xhuljan Mouse......
-public class GamePlay extends JPanel implements KeyListener, ActionListener, MouseMotionListener {
+public class GamePlay extends JPanel implements KeyListener, ActionListener, MouseMotionListener, MouseListener {
 
     private boolean play = false;
     private int score = 0;
@@ -35,11 +35,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener, Mou
         addMouseListener(this);
         addMouseMotionListener(this);
 
-    }
 
 
-    // by xhuljan // Mouse Added
-    private void addMouseListener(GamePlay gamePlay) {
     }
 
 
@@ -81,6 +78,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener, Mou
 
             g.setFont(new Font("serif", Font.BOLD, 20));
             g.drawString("Drücke Enter um neu zu starten", 230, 350);
+            g.drawString("Oder Click mit der Maus ",230,380);
         }
 
         if (ballposY > 570){
@@ -91,8 +89,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener, Mou
             g.setFont(new Font("serif", Font.BOLD, 30));
             g.drawString("Game Over!", 190, 300);
 
-            g.setFont(new Font("serif", Font.BOLD, 20));
             g.drawString("Drücke Enter um neu zu starten", 230, 350);
+            g.drawString("Oder Click mit der Maus ",230,380);
         }
 
         g.dispose();
@@ -148,6 +146,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener, Mou
                 ballXdir = 0;
                 ballYdir = 0;
             }
+
+
         }
         repaint();
     }
@@ -218,12 +218,50 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener, Mou
         if (mouseX >= 0 && mouseX <= 600) {
             playerX = mouseX - 15;
         }
-        play = true;
+
     }
 
     @Override
     public void mouseDragged(MouseEvent e) {
 
     }
+    @Override
+    public void  mouseClicked(MouseEvent e){
 
+        if(!play){
+            play = true;
+            ballposX = 120;
+            ballposY = 350;
+            ballXdir = -1;
+            ballYdir = -2;
+            playerX = 310;
+            score = 0;
+            totalBricks = 21;
+            map = new MapGenerator(3, 7);
+
+            repaint();
+        }
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
 }
+
