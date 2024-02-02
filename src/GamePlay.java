@@ -15,8 +15,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener, Mou
     private int ballposX = 120;
     private int ballposY = 350;
 
-    private int ballXdir =-2;
-    private int ballYdir =-2;
+    private int ballXdir =-1;
+    private int ballYdir =-1;
 
     private MapGenerator map;
 
